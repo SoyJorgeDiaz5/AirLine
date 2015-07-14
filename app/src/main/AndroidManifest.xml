@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.joluditru.airline" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".InicioSesion"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Servicios"
+            android:label="@string/title_activity_servicios" >
+        </activity>
+        <activity
+            android:name=".NuevaCuenta"
+            android:label="@string/title_activity_nueva_cuenta" >
+        </activity>
+        <activity
+            android:name=".RecuperacionContrasena"
+            android:label="@string/title_activity_recuperacion_contrasena" >
+        </activity>
+        <activity
+            android:name=".ConsultarVuelos"
+            android:label="@string/title_activity_consultar_vuelos" >
+        </activity>
+        <activity
+            android:name=".VuelosGuardados"
+            android:label="@string/title_activity_vuelos_guardados" >
+        </activity>
+        <activity
+            android:name=".VuelosReservados"
+            android:label="@string/title_activity_vuelos_reservados" >
+        </activity>
+        <activity
+            android:name=".Checkin"
+            android:label="@string/title_activity_checkin" >
+        </activity>
+    </application>
+
+</manifest>

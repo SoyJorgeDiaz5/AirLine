@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.joluditru.airline.Servicios">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/servicios"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/consultarVuelos"
+            android:id="@+id/btnConsultarVuelos"
+            android:textSize="20sp"
+            android:background="@drawable/my_draws"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/vuelosGuardados"
+            android:id="@+id/btnVuelosGuardados"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:background="@drawable/my_draws"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/vuelosReservados"
+            android:id="@+id/btnVuelosReservados"
+            android:textSize="20sp"
+            android:background="@drawable/my_draws"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/checkin"
+            android:id="@+id/btnCheckin"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:background="@drawable/my_draws"/>
+    </LinearLayout>
+
+</LinearLayout>
