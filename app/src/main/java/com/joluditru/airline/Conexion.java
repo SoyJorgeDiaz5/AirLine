@@ -5,6 +5,7 @@ package com.joluditru.airline;
  */
 
 import android.app.Activity;
+import android.preference.PreferenceActivity;
 import android.util.Log;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -15,7 +16,8 @@ import org.apache.http.Header;
 
 import java.io.UnsupportedEncodingException;
 
-public class Conexion extends Activity{
+public class Conexion extends Activity
+{
 
     //private  String ip;
     private String url;
@@ -23,13 +25,16 @@ public class Conexion extends Activity{
     private static Conexion singleton = null;
     private static String retorno;
 
-    Conexion(String ip){
+
+    private Conexion(String ip)
+    {
         //this.ip = ip;
-        url = "http://"+ip+":8080/WebServiceAirLine/WebService";
+        url = "http://"+ip+":8080/ServicioWebAerolineaUdea/ServicioWeb";
         client = new AsyncHttpClient();
     }
 
-    public static Conexion getInstance(String ip){
+    public static Conexion getInstance(String ip)
+    {
         if(singleton==null){
             singleton = new Conexion(ip);
         }
@@ -53,42 +58,34 @@ public class Conexion extends Activity{
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
                 // TODO Auto-generated method stub
                 retorno="error";
-                Log.d("TAG", "ERROR DE CONEXI�N");
+                Log.d("TAG", "ERROR DE CONEXIÓN");
             }
         });
         return retorno;
     }
 
-    public String getCiudades(){
-        RequestParams parametros = new RequestParams();
-        String datos = this.buscar(url+"/ConsultarCiudades", null);
-        return datos;
-    }
-
-
-    public String getCartelera(String cartelera){
-        RequestParams parametros = new RequestParams();
-        parametros.add("idCartelera", cartelera);
-        return this.buscar(url+"/getCartelera", parametros);
-    }
-
-    public boolean loggin(String usuario,String contrasena){
+    public boolean iniciarSesion(String usuario,String contrasena)
+    {
         boolean retorno = false;
         RequestParams parametros = new RequestParams();
-        parametros.add("id_usuario", usuario);
+        parametros.add("usuario", usuario);
         parametros.add("contrasena", contrasena);
-        String datos = this.buscar(url+"/loggin", parametros);
+        String datos = this.buscar(url+"/IniciarSesion", parametros);
         if(datos.equals("true")){
             retorno = true;
         }
         return retorno;
     }
 
-    public String gerInformacionPelicula(String idPelicula){
+
+
+    public String getCiudades()
+    {
         RequestParams parametros = new RequestParams();
-        parametros.add("id_pelicula", idPelicula);
-        return this.buscar(url+"/getInformacionPelicula", parametros);
+        String datos = this.buscar(url+"/ConsultarCiudades", null);
+        return datos;
     }
+
     //solo se puede reservar de a una boleta
     public boolean realizarReserva(String boleta,String usuario){
         boolean retorno = false;

@@ -19,6 +19,7 @@ public class InicioSesion extends Activity {
     EditText txtContraseña;
     Button btnEntrar;
     Button btnCrearCuenta;
+    Conexion conexion;
 
 
     @Override
@@ -45,12 +46,15 @@ public class InicioSesion extends Activity {
                 String usuario = txtUsuario.getText().toString().trim();
                 String contraseña = txtContraseña.getText().toString();
 
-
+                conexion = Conexion.getInstance("192.168.193.26");
 
                 //Inicia una nueva actividad si retorna True
-                if (validarUsuario(usuario, contraseña)) {
+                if (conexion.iniciarSesion(usuario, contraseña)) {
                     Intent intent = new Intent(getApplicationContext(), Servicios.class);
                     startActivity(intent);
+                }else
+                {
+                    Toast.makeText(getApplicationContext(), "Por favor verifique su usuario y contraseña", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -102,18 +106,4 @@ public class InicioSesion extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean validarUsuario(String user, String pass)
-    {
-        boolean validacion = false;
-        if(user.equals("") && pass.equals(""))
-        {
-            validacion = true;
-            return validacion;
-        }
-        else
-        {
-            Toast.makeText(this, "Por favor verifique su usuario y contraseña", Toast.LENGTH_LONG).show();
-            return validacion;
-        }
-    }
 }
