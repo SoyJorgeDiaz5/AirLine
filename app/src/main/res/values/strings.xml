@@ -10,7 +10,7 @@
     <string name="contraseña">Contraseña</string>
     <string name="entrar">Entrar</string>
     <string name="crearCuenta">Crear nueva cuenta</string>
-    <string name="olvidoContraseña">Olvidó su contraseña</string>
+    <string name="olvidoContraseña">¿Olvidó su contraseña?</string>
 
     <!-- Recuperación pass -->
     <string name="recuperacionContrasena">RECUPERACIÓN DE CONTRASEÑA</string>
@@ -46,6 +46,12 @@
 
     <string name="seleccionFecha">Presione aquí para escoger su fecha</string>
 
+    <!-- Informacion Vuelos -->
+    <string name="precio">Precio</string>
+    <string name="asientos">Asientos disponibles</string>
+    <string name="guardarVuelo">GUARDAR VUELO</string>
+    <string name="reservarTiquetes">RESERVAR TIQUETES</string>
+
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
@@ -57,11 +63,12 @@
 
     <string name="action_example">Example action</string>
     <string name="title_activity_servicios">Servicios</string>
-    <string name="title_activity_nueva_cuenta">NuevaCuenta</string>
-    <string name="title_activity_recuperacion_contrasena">RecuperacionContrasena</string>
-    <string name="title_activity_consultar_vuelos">ConsultarVuelos</string>
-    <string name="title_activity_vuelos_guardados">VuelosGuardados</string>
-    <string name="title_activity_vuelos_reservados">VuelosReservados</string>
+    <string name="title_activity_nueva_cuenta">Nueva Cuenta</string>
+    <string name="title_activity_recuperacion_contrasena">Recuperacion Contrasena</string>
+    <string name="title_activity_consultar_vuelos">Consultar Vuelos</string>
+    <string name="title_activity_vuelos_guardados">Vuelos Guardados</string>
+    <string name="title_activity_vuelos_reservados">Vuelos Reservados</string>
     <string name="title_activity_checkin">Checkin</string>
-    <string name="title_activity_lista_vuelos">ListaVuelos</string>
+    <string name="title_activity_lista_vuelos">Lista Vuelos</string>
+    <string name="title_activity_informacion_vuelo">INFORMACIÓN DE VUELO</string>
 </resources>

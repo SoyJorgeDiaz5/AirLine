@@ -48,6 +48,10 @@
             android:name=".ListaVuelos"
             android:label="@string/title_activity_lista_vuelos" >
         </activity>
+        <activity
+            android:name=".InformacionVuelo"
+            android:label="@string/title_activity_informacion_vuelo" >
+        </activity>
     </application>
 
 </manifest>

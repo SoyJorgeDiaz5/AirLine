@@ -45,6 +45,8 @@ public class InicioSesion extends Activity {
                 String usuario = txtUsuario.getText().toString().trim();
                 String contraseña = txtContraseña.getText().toString();
 
+
+
                 //Inicia una nueva actividad si retorna True
                 if (validarUsuario(usuario, contraseña)) {
                     Intent intent = new Intent(getApplicationContext(), Servicios.class);
