@@ -7,13 +7,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.joluditru.airline.ConsultarVuelos">
+    tools:context="com.joluditru.airline.ConsultarVuelos"
+    android:background="@mipmap/menu">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
         android:layout_weight="0.24"
         android:layout_marginTop="30dp">
 
@@ -27,11 +27,16 @@
             android:id="@+id/lblOrigen" />
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/spinnerOrigen"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:textAlignment="center"
             android:layout_marginStart="40dp"
-            android:entries="@array/ArrayOrigen"/>
+            android:entries="@array/ArrayOrigen"
+            android:popupBackground="@color/primary"
+            android:popupElevation="@android:dimen/thumbnail_width" />
     </LinearLayout>
 
 
@@ -51,11 +56,16 @@
             android:id="@+id/lblDestino" />
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
             android:id="@+id/spinnerDestino"
             android:layout_marginStart="40dp"
-            android:entries="@array/ArrayDestino"/>
+            android:entries="@array/ArrayDestino"
+            android:background="@drawable/rectangle"
+            android:popupBackground="@color/primary"
+            android:popupElevation="@android:dimen/thumbnail_width" />
     </LinearLayout>
 
 
@@ -66,7 +76,8 @@
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/rango"
-        android:id="@+id/lblRango" />
+        android:id="@+id/lblRango"
+        android:textColor="@color/negro" />
 
     <LinearLayout
         android:layout_width="match_parent"

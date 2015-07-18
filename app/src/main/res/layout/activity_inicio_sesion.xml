@@ -7,7 +7,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.joluditru.aerolnea.InicioSesion">
+    tools:context="com.joluditru.aerolnea.InicioSesion"
+    android:background="@mipmap/sesion">
 
     <TextView
         android:layout_width="match_parent"
@@ -66,15 +67,15 @@
         android:textColor="@color/blanco"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/olvidoContraseña"
         android:id="@+id/lblOlvidoContraseña"
-        android:gravity="center"
         android:layout_marginTop="25dp"
         android:textSize="20sp"
         android:textStyle="italic"
-        android:textColor="@color/accent"/>
+        android:textColor="@color/negro"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AirLine</string>
+    <string name="app_name">AirLine UdeA</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -63,4 +63,5 @@
     <string name="title_activity_vuelos_guardados">VuelosGuardados</string>
     <string name="title_activity_vuelos_reservados">VuelosReservados</string>
     <string name="title_activity_checkin">Checkin</string>
+    <string name="title_activity_lista_vuelos">ListaVuelos</string>
 </resources>

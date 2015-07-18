@@ -2,10 +2,12 @@ package com.joluditru.airline;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -13,6 +15,7 @@ public class ConsultarVuelos extends Activity {
 
     EditText txtDesde;
     EditText txtHasta;
+    Button btnConsultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,15 @@ public class ConsultarVuelos extends Activity {
                 DateDialog dialog = new DateDialog(view);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 dialog.show(ft, "Selección de fecha");
+            }
+        });
+
+        btnConsultar = (Button)findViewById(R.id.btnConsultar);
+        btnConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ListaVuelos.class);
+                startActivity(intent);
             }
         });
     }

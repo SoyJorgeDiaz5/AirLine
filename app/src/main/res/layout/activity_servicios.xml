@@ -7,7 +7,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.joluditru.airline.Servicios">
+    tools:context="com.joluditru.airline.Servicios"
+    android:background="@mipmap/menu">
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +33,8 @@
             android:text="@string/consultarVuelos"
             android:id="@+id/btnConsultarVuelos"
             android:textSize="20sp"
-            android:background="@drawable/my_draws"/>
+            android:background="@drawable/oval"
+            android:textColor="@color/blanco" />
 
         <Button
             android:layout_width="150dp"
@@ -41,7 +43,8 @@
             android:id="@+id/btnVuelosGuardados"
             android:layout_marginStart="20dp"
             android:textSize="20sp"
-            android:background="@drawable/my_draws"/>
+            android:background="@drawable/oval"
+            android:textColor="@color/blanco" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,7 +60,8 @@
             android:text="@string/vuelosReservados"
             android:id="@+id/btnVuelosReservados"
             android:textSize="20sp"
-            android:background="@drawable/my_draws"/>
+            android:background="@drawable/oval"
+            android:textColor="@color/blanco" />
 
         <Button
             android:layout_width="150dp"
@@ -65,9 +69,10 @@
             android:text="@string/checkin"
             android:id="@+id/btnCheckin"
             android:layout_marginTop="12dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:textSize="20sp"
-            android:background="@drawable/my_draws"/>
+            android:background="@drawable/oval"
+            android:textColor="@color/blanco" />
     </LinearLayout>
 
 </LinearLayout>
