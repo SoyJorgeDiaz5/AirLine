@@ -70,7 +70,7 @@ public class Conexion extends Activity
         RequestParams parametros = new RequestParams();
         parametros.add("usuario", usuario);
         parametros.add("contrasena", contrasena);
-        String datos = this.buscar(url+"/IniciarSesion", parametros);
+        String datos = this.buscar(url+"/IniciarSesion",null);//, parametros);
         if(datos.equals("true")){
             retorno = true;
         }
@@ -81,7 +81,7 @@ public class Conexion extends Activity
 
     public String getCiudades()
     {
-        RequestParams parametros = new RequestParams();
+        //RequestParams parametros = new RequestParams();
         String datos = this.buscar(url+"/ConsultarCiudades", null);
         return datos;
     }

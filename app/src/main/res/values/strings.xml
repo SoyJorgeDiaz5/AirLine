@@ -47,17 +47,28 @@
     <string name="seleccionFecha">Presione aquí para escoger su fecha</string>
 
     <!-- Informacion Vuelos -->
+    <string name="lista_vuelos">LISTA DE VUELOS</string>
     <string name="precio">Precio</string>
     <string name="asientos">Asientos disponibles</string>
     <string name="guardarVuelo">GUARDAR VUELO</string>
     <string name="reservarTiquetes">RESERVAR TIQUETES</string>
 
     <!-- Nueva Cuenta -->
+    <string name="nueva_cuenta">NUEVA CUENTA</string>
     <string name="nuevo_usuario">Nuevo usuario</string>
     <string name="identificacion">Identificación</string>
     <string name="nombres">Nombres</string>
     <string name="apellidos">Apellidos</string>
     <string name="crear_usuario">CREAR USUARIO</string>
+
+    <!-- VUELOS GUARDADOS -->
+    <string name="vuelos_guardados">VUELOS GUARDADOS</string>
+
+    <!-- VUELOS RESERVADOS -->
+    <string name="wuelos_reservados">VUELOS RESERVADOS</string>
+
+    <!-- CHECKIN -->
+    <string name="check-in">CHECKIN</string>
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
@@ -75,6 +86,6 @@
     <string name="title_activity_vuelos_guardados">Vuelos Guardados</string>
     <string name="title_activity_vuelos_reservados">Vuelos Reservados</string>
     <string name="title_activity_checkin">Checkin</string>
-    <string name="title_activity_lista_vuelos">Lista Vuelos</string>
+    <string name="title_activity_lista_vuelos">Vuelos</string>
     <string name="title_activity_informacion_vuelo">INFORMACIÓN DE VUELO</string>
 </resources>

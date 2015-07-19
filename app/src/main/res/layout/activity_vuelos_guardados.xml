@@ -10,9 +10,20 @@
     tools:context="com.joluditru.airline.VuelosGuardados"
     android:background="@mipmap/menu">
 
-    <TextView android:text="VUELOS GUARDADOS"
+    <TextView
+        android:text="@string/vuelos_guardados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/LayoutmarginTop"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

@@ -10,7 +10,7 @@
     tools:context="com.joluditru.airline.ListaVuelos"
     android:background="@mipmap/menu">
 
-    <TextView android:text="@string/title_activity_lista_vuelos"
+    <TextView android:text="@string/lista_vuelos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
