@@ -29,7 +29,7 @@ public class Conexion extends Activity
     private Conexion(String ip)
     {
         //this.ip = ip;
-        url = "http://"+ip+":8080/ServicioWebAerolineaUdea/ServicioWeb";
+        url = "http://"+ip+":8080/ServicioWebAerolineaUdeA/webresources/ServicioWeb";//192.168.1.64
         client = new AsyncHttpClient();
     }
 

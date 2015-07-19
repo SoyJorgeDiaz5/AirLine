@@ -20,161 +20,77 @@
         android:layout_marginTop="@dimen/LayoutmarginTop"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/heightButton"
-        android:orientation="horizontal">
+        android:hint="@string/nombres"
+        android:textSize="20sp"
+        android:inputType="textPersonName"
+        android:id="@+id/txtNombres"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
 
-        <TextView
-            android:text="@string/nombres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/LayoutmarginTop">
+        android:hint="@string/apellidos"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:id="@+id/txtApellidos"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/LayoutmarginTop"/>
 
-        <TextView
-            android:text="@string/apellidos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/LayoutmarginTop">
+        android:hint="@string/identificacion"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:id="@+id/txtIdentificacion"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/LayoutmarginTop"/>
 
-        <TextView
-            android:text="@string/identificacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/LayoutmarginTop">
+        android:hint="@string/nuevo_usuario"
+        android:textSize="20sp"
+        android:id="@+id/txtUsuario"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/LayoutmarginTop"/>
 
-        <TextView
-            android:text="@string/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/LayoutmarginTop">
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="@string/email"
+        android:textSize="20sp"
+        android:id="@+id/txtCorreo"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/LayoutmarginTop"
+        android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:text="@string/nuevo_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/LayoutmarginTop">
-
-        <TextView
-            android:text="@string/nuevo_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:inputType="textPassword"
+        android:hint="@string/contraseña"
+        android:textSize="20sp"
+        android:id="@+id/txtContraseña"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/LayoutmarginTop"
+        android:layout_marginBottom="20dp"/>
 
         <Button
-            android:text="@string/guardarVuelo"
-            android:layout_width="wrap_content"
+            android:text="@string/crear_usuario"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:background="@color/primary"
-            android:textColor="@color/blanco"/>
-
-        <Button
-            android:text="@string/reservarTiquetes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginStart="20dp"
             android:background="@color/primary"
             android:textColor="@color/blanco"
-            />
+            android:textSize="25sp"
+            android:id="@+id/btnGuardarVuelo"/>
 
-    </LinearLayout>
+
 
 </LinearLayout>

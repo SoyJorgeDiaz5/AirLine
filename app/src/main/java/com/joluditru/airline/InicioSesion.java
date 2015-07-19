@@ -46,7 +46,7 @@ public class InicioSesion extends Activity {
                 String usuario = txtUsuario.getText().toString().trim();
                 String contraseña = txtContraseña.getText().toString();
 
-                conexion = Conexion.getInstance("192.168.193.26");
+                conexion = Conexion.getInstance("192.168.1.64");
 
                 //Inicia una nueva actividad si retorna True
                 if (conexion.iniciarSesion(usuario, contraseña)) {
