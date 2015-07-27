@@ -5,7 +5,6 @@ package com.joluditru.airline;
  */
 
 import android.app.Activity;
-import android.preference.PreferenceActivity;
 import android.util.Log;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -42,7 +41,7 @@ public class Conexion extends Activity
     }
     //metodo que consume el servicio web
     public String buscar(String url,RequestParams parametros){
-        client.get(this, url, parametros, new AsyncHttpResponseHandler() {
+        client.get(getApplicationContext(), url, parametros, new AsyncHttpResponseHandler() {
 
 
             @Override
@@ -70,7 +69,7 @@ public class Conexion extends Activity
         RequestParams parametros = new RequestParams();
         parametros.add("usuario", usuario);
         parametros.add("contrasena", contrasena);
-        String datos = this.buscar(url+"/IniciarSesion",null);//, parametros);
+        String datos = this.buscar(url+"/IniciarSesion",null);
         if(datos.equals("true")){
             retorno = true;
         }
