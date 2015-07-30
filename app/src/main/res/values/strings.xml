@@ -23,7 +23,6 @@
     <string name="consultarVuelos">Consultar vuelos</string>
     <string name="vuelosGuardados">Vuelos guardados</string>
     <string name="vuelosReservados">Vuelos reservados</string>
-    <string name="checkin">Check-in</string>
 
     <!-- Consultar vuelos -->
     <string name="origen">Origen</string>
@@ -32,15 +31,15 @@
     <string name="fecha">Fecha</string>
     <string name="consultar">CONSULTAR</string>
     <string-array name="ArrayCiudades">
-        <item>Bogota</item>
-        <item>Medellin</item>
-        <item>Cali</item>
-        <item>Lima</item>
-        <item>Madrid</item>
-        <item>Miami</item>
         <item>Florencia</item>
-        <item>Santiago</item>
+        <item>Medellin</item>
+        <item>Bogota</item>
+        <item>Cali</item>
         <item>Pereira</item>
+        <item>Miami</item>
+        <item>Lima</item>
+        <item>Santiago</item>
+        <item>Madrid</item>
     </string-array>
 
     <string name="seleccionFecha">Presione aquí para escoger su fecha</string>
@@ -67,7 +66,7 @@
     <string name="wuelos_reservados">VUELOS RESERVADOS</string>
 
     <!-- CHECKIN -->
-    <string name="check_in">CHECKIN</string>
+    <string name="check_in">CHECK-IN</string>
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">

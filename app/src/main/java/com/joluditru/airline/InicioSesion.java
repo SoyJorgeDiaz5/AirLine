@@ -60,7 +60,7 @@ public class InicioSesion extends Activity {
                 String usuario = txtUsuario.getText().toString().trim();
                 String contraseña = txtContraseña.getText().toString();
 
-                conexion = Conexion.getInstance("192.168.193.25");
+                conexion = Conexion.getInstance("192.168.1.64");
 
                 IniSesion login =  new IniSesion();
                 login.execute();

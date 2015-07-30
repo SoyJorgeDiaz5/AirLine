@@ -84,7 +84,7 @@ public class ConsultarVuelos extends Activity {
                 if (origen.equals(destino) || fecha.equals("") ){
                     Toast.makeText(getApplicationContext(), "Verifique los campos de Origen, Destino y Fecha.", Toast.LENGTH_SHORT).show();
                 }else{
-                    conexion = Conexion.getInstance("192.168.193.25");
+                    conexion = Conexion.getInstance("192.168.1.64");
 
                     ConsVuelos consulta =  new ConsVuelos();
                     consulta.execute();

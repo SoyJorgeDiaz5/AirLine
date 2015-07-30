@@ -10,7 +10,7 @@
     tools:context="com.joluditru.airline.Checkin"
     android:background="@mipmap/menu">
 
-    <TextView android:text="@string/title_activity_checkin"
+    <TextView android:text="@string/check_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
