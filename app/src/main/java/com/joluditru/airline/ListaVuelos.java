@@ -2,17 +2,56 @@ package com.joluditru.airline;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ListaVuelos extends Activity {
+
+    String vuelos = "";
+    String[] listaVuelos;
+    ListView lista;
+    List<String> list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_vuelos);
+        list = new ArrayList<>();
+        vuelos = getIntent().getStringExtra("parametros");
+
+        Log.d("SplitVuelos",vuelos);
+        listaVuelos = vuelos.split("&");
+
+        for (int i=0; i<listaVuelos.length; i++){
+            String[] vuelo = listaVuelos[i].split(",");
+            String cadena = "";
+            for (int j=0; j < vuelo.length;j++){
+                cadena = cadena + vuelo[j] + "\n";
+            }
+            list.add(cadena);
+            Log.d("CADENA", cadena);
+        }
+        lista = (ListView) findViewById(R.id.listaConsultaVuelos);
+        lista.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,list));
+
     }
+
+
+
+
+
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -28,20 +28,19 @@
     <!-- Consultar vuelos -->
     <string name="origen">Origen</string>
     <string name="destino">Destino</string>
-    <string name="rango">Seleccione un rango de fechas a consultar</string>
-    <string name="desde">Desde</string>
-    <string name="hasta">Hasta</string>
+    <string name="rango">Seleccione el día que desea consultar</string>
+    <string name="fecha">Fecha</string>
     <string name="consultar">CONSULTAR</string>
-    <string-array name="ArrayOrigen">
-        <item>Bogotá</item>
-        <item>Medellín</item>
+    <string-array name="ArrayCiudades">
+        <item>Bogota</item>
+        <item>Medellin</item>
         <item>Cali</item>
-    </string-array>
-
-    <string-array name="ArrayDestino">
-        <item>Bogotá</item>
-        <item>Medellín</item>
-        <item>Cali</item>
+        <item>Lima</item>
+        <item>Madrid</item>
+        <item>Miami</item>
+        <item>Florencia</item>
+        <item>Santiago</item>
+        <item>Pereira</item>
     </string-array>
 
     <string name="seleccionFecha">Presione aquí para escoger su fecha</string>

@@ -5,6 +5,10 @@ package com.joluditru.airline;
  */
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -12,23 +16,41 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Conexion extends Activity
+public class Conexion
 {
 
     //private  String ip;
     private String url;
     private AsyncHttpClient client;
     private static Conexion singleton = null;
-    private static String retorno;
+    private  String resultado = "";
+    private InputStream is;
 
 
     private Conexion(String ip)
     {
         //this.ip = ip;
-        url = "http://"+ip+":8080/ServicioWebAerolineaUdeA/webresources/ServicioWeb";//192.168.1.64
+        url = "http://"+ip+":8080/ServicioWebAerolineaUdeA/webresources/ServicioWeb/";
         client = new AsyncHttpClient();
     }
 
@@ -40,27 +62,43 @@ public class Conexion extends Activity
         return singleton;
     }
     //metodo que consume el servicio web
-    public String buscar(String url,RequestParams parametros){
-        client.get(getApplicationContext(), url, parametros, new AsyncHttpResponseHandler() {
+    public String buscar(String ruta,List parametros){
+            // Haciendo la Peticion HTTP
+            try {
+                    // request method is GET
+                    DefaultHttpClient httpClient = new DefaultHttpClient();
+                    String paramString = URLEncodedUtils.format(parametros, "utf-8");
+                    ruta = url + ruta  + "?" + paramString;
+                    HttpGet httpGet = new HttpGet(ruta);
+                    HttpResponse httpResponse = httpClient.execute(httpGet);
+                    HttpEntity httpEntity = httpResponse.getEntity();
+                    is = httpEntity.getContent();
 
 
-            @Override
-            public void onSuccess(int i, Header[] headers, byte[] bytes) {
-                try{
-                    retorno = new String(bytes,"UTF-8");
-                }catch(UnsupportedEncodingException uee){
-                    uee.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+                try {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(
+                            is, "utf-8"), 8);
+                    StringBuilder sb = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        sb.append(line + "\n");
+                    }
+                    is.close();
+                    resultado = sb.toString();
+                } catch (Exception e) {
+                    Log.e("Buffer Error", "Error converting result " + e.toString());
                 }
-            }
 
-            @Override
-            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                // TODO Auto-generated method stub
-                retorno="error";
-                Log.d("TAG", "ERROR DE CONEXIÓN");
-            }
-        });
-        return retorno;
+                return resultado;
+
     }
 
     public boolean iniciarSesion(String usuario,String contrasena)
@@ -85,16 +123,4 @@ public class Conexion extends Activity
         return datos;
     }
 
-    //solo se puede reservar de a una boleta
-    public boolean realizarReserva(String boleta,String usuario){
-        boolean retorno = false;
-        RequestParams parametros = new RequestParams();
-        parametros.add("id_boleta", boleta);
-        parametros.add("id_usuario", usuario);
-        String datos = this.buscar(url+"/realizarReserva", parametros);
-        if(datos.equals("true")){
-            retorno = true;
-        }
-        return retorno;
-    }
 }
